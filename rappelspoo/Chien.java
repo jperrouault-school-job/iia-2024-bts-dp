@@ -1,6 +1,6 @@
 package rappelspoo;
 
-public class Chien extends Animal {
+public class Chien extends Animal implements Chasseur {
     public Chien(String nom) {
         super(nom);
         System.out.println("CREATION D'UN CHIEN !");
@@ -14,5 +14,16 @@ public class Chien extends Animal {
     @Override
     public void manger() {
         System.out.println("Le chien mange ...");
+    }
+
+    @Override
+    public void chasser(Proie proie) {
+        System.out.println("Le chien chasse sa proie " + proie);
+        proie.mourir(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Le chien " + this.nom;
     }
 }

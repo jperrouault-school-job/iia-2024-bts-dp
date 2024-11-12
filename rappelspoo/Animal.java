@@ -1,7 +1,7 @@
 package rappelspoo;
 
 public abstract class Animal {
-    private String nom;
+    protected String nom;
 
     public String getNom() {
         return nom;
