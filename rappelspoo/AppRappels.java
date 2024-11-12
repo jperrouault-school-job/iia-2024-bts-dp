@@ -26,7 +26,6 @@ public class AppRappels {
         }
 
 
-
         List<Animal> animaux = new ArrayList<>();
         // Shift + Alt + O
 
@@ -36,7 +35,7 @@ public class AppRappels {
 
         // Pour chaque animal contenu dans animaux
         for (Animal animal : animaux) {
-            animal.dormir();
+            animal.manger();
         }
     }
 }

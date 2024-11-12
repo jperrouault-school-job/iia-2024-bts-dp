@@ -16,4 +16,9 @@ public class Chat extends Animal {
         // super.dormir();
         System.out.println("Le chat dort ...");
     }
+
+    @Override
+    public void manger() {
+        System.out.println("Le chat mange ...");
+    }
 }

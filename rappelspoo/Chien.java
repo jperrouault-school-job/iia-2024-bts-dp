@@ -10,4 +10,9 @@ public class Chien extends Animal {
     public void dormir() {
         System.out.println("Le chien dort ...");
     }
+
+    @Override
+    public void manger() {
+        System.out.println("Le chien mange ...");
+    }
 }

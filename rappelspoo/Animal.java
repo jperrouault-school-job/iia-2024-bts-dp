@@ -1,6 +1,6 @@
 package rappelspoo;
 
-public class Animal {
+public abstract class Animal {
     private String nom;
 
     public String getNom() {
@@ -24,7 +24,9 @@ public class Animal {
         System.out.println("L'animal dort ...");
     }
 
-    public void manger() {
-        System.out.println("L'animal mange ...");
-    }
+    // public void manger() {
+    //     System.out.println("L'animal mange ...");
+    // }
+
+    public abstract void manger();
 }
