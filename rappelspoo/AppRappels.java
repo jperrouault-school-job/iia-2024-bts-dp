@@ -38,12 +38,9 @@ public class AppRappels {
             animal.manger();
         }
 
-
-
         Chat tom = new Chat("Tom");
         Souris jerry = new Souris("Jerry");
 
         tom.chasser(jerry);
-
     }
 }

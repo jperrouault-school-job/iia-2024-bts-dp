@@ -13,6 +13,10 @@ public class Souris extends Animal implements Proie {
 
     @Override
     public void mourir(Chasseur chasseur) {
+        if (chasseur instanceof Chat) {
+            System.out.println("La souris fait un looping !");
+        }
+
         System.out.println("La souris se meurt ... :( par " + chasseur);
     }
 
