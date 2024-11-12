@@ -2,12 +2,26 @@ package rappelspoo;
 
 public class AppRappels {
     public static void main(String[] args) {
-        Chat albert = new Chat();
+        Animal albert = new Chat();
 
-        albert.setNom("Albert");
+        // ((Chat)albert).setNom("Albert");
+        
+        // if (albert instanceof Chat) {
+        //     Chat chat = (Chat)albert;
 
-        System.out.println("Le chat s'appelle " + albert.getNom());
+        //     chat.setNom("Albert");
+        //     System.out.println("Le chat s'appelle " + chat.getNom());
+            
+        //     // ((Chat)albert).setNom("Albert");
+        //     // System.out.println("Le chat s'appelle " + ((Chat)albert).getNom());
+        // }
+
+        if (albert instanceof Chat chat) {
+            chat.setNom("Albert");
+            System.out.println("Le chat s'appelle " + chat.getNom());
+        }
 
         albert.dormir();
+        albert.manger();
     }
 }

@@ -1,6 +1,6 @@
 package rappelspoo;
 
-public class Chat {
+public class Chat extends Animal {
     private String nom;
 
     public String getNom() {
@@ -15,7 +15,9 @@ public class Chat {
         this.nom = nom;
     }
 
+    @Override
     public void dormir() {
+        // super.dormir();
         System.out.println("Le chat dort ...");
     }
 
