@@ -7,5 +7,7 @@ public class Main {
             .build()
         ;
 
+        new DbConfig();
+
     }
 }
