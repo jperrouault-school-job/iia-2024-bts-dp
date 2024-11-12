@@ -24,4 +24,8 @@ public class Souris extends Animal implements Proie {
     public String toString() {
         return "La souris " + this.nom;
     }
+
+    public static void demoStatic() {
+        System.out.println("La méthode statique !");
+    }
 }

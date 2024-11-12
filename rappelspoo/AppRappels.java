@@ -42,5 +42,8 @@ public class AppRappels {
         Souris jerry = new Souris("Jerry");
 
         tom.chasser(jerry);
+
+        Souris.demoStatic();
+
     }
 }
