@@ -6,6 +6,11 @@ public class Chat extends Animal {
         System.out.println("CREATION DU CHAT " + nom);
     }
 
+    public Chat() {
+        super("- Pas de nom -");
+        System.out.println("CREATION D'UN CHAT SANS NOM !");
+    }
+
     @Override
     public void dormir() {
         // super.dormir();
