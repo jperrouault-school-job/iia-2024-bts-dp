@@ -2,7 +2,7 @@ package rappelspoo;
 
 public class AppRappels {
     public static void main(String[] args) {
-        Animal albert = new Chat();
+        Animal albert = new Chat("Albert");
 
         // ((Chat)albert).setNom("Albert");
         
