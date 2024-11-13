@@ -1,6 +1,7 @@
 package fr.formation;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import lombok.RequiredArgsConstructor;
 
@@ -8,10 +9,20 @@ import lombok.RequiredArgsConstructor;
 public class ProduitRepositoryProxy extends ProduitRepository {
     private final ProduitRepository produitRepository;
 
-    private List<Produit> produitsCached;
+    private CompletableFuture<List<Produit>> produitsCached;
 
     @Override
-    public List<Produit> findAll() {
+    public CompletableFuture<List<Produit>> findAll() {
+        if (this.produitsCached != null && this.produitsCached.isDone()) {
+            try {
+                return CompletableFuture.completedFuture(this.produitsCached.get());
+            }
+            
+            catch (Exception e) {
+                Thread.currentThread().interrupt();
+            } 
+        }
+
         if (this.produitsCached == null) {
             this.produitsCached = this.produitRepository.findAll();
         }
