@@ -2,8 +2,10 @@ package fr.formation;
 
 import java.util.List;
 
-public class ProduitRepository {
+public class ProduitRepository extends Publisher {
     public List<Produit> findAll() {
+        this.publish();
+
         return List.of(
             Produit.builder().id("p1").nom("Produit 1").build(),
             Produit.builder().id("p2").nom("Produit 2").build(),
